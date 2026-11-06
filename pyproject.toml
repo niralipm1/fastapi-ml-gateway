@@ -1,0 +1,23 @@
+[project]
+name = "fastapi-ml-gateway"
+version = "1.1.0"
+description = "High-throughput asynchronous AI inference proxy with Redis semantic caching and token streaming."
+authors = [{ name = "Nirali Motka", email = "niralplaystore1@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.111.0",
+    "uvicorn[standard]>=0.30.1",
+    "pydantic>=2.7.4",
+    "pydantic-settings>=2.3.0",
+    "redis>=5.0.4",
+    "httpx>=0.27.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
